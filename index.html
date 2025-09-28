@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculateur de Profit - Path of Exile 2</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/sections.css">
+    <link rel="stylesheet" href="styles/modal.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="main-title">📊 CALCULATEUR DE PROFIT POE2</h1>
+        </header>
+        
+        <section class="price-management-section">
+            <div class="section-title price-management-title">⚙️ GESTION DES PRIX</div>
+            <div class="form-group">
+                <button id="editPricesBtn" class="btn btn-primary">📝 MODIFIER LES PRIX</button>
+                <button id="exportPricesBtn" class="btn btn-secondary">💾 SAUVEGARDER LES PRIX</button>
+                <input type="file" id="fileInput" accept=".json" class="hidden">
+                <button id="importPricesBtn" class="btn btn-success">📁 CHARGER LES PRIX</button>
+            </div>
+        </section>
+        
+        <section class="sell-section">
+            <div class="section-title sell-title">💰 ITEM À VENDRE</div>
+            
+            <div class="form-group">
+                <label for="sellItem">Item:</label>
+                <div class="search-container">
+                    <input type="text" id="sellItem" placeholder="Tapez le nom de l'item (ex: orbe, divine, chaos...)" autocomplete="off">
+                    <div class="suggestions" id="sellSuggestions"></div>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="sellQuantity">Quantité:</label>
+                <input type="number" id="sellQuantity" min="1" value="1" class="quantity-input">
+                <label>Valeur unitaire:</label>
+                <div class="value-display" id="sellUnitValue">-</div>
+            </div>
+            
+            <div class="form-group">
+                <label>Valeur totale:</label>
+                <div class="value-display total-value" id="sellTotalValue">0 Orbes Exaltées</div>
+            </div>
+        </section>
+        
+        <section class="buy-section">
+            <div class="section-title buy-title">💸 COÛT D'ACHAT</div>
+            
+            <div class="form-group">
+                <label for="buyItem">Item:</label>
+                <div class="search-container">
+                    <input type="text" id="buyItem" placeholder="Tapez le nom de l'item à acheter..." autocomplete="off">
+                    <div class="suggestions" id="buySuggestions"></div>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="buyQuantity">Quantité:</label>
+                <input type="number" id="buyQuantity" min="1" value="1" class="quantity-input">
+                <label>Valeur unitaire:</label>
+                <div class="value-display" id="buyUnitValue">-</div>
+            </div>
+            
+            <div class="form-group">
+                <label>Coût total:</label>
+                <div class="value-display total-value" id="buyTotalValue">0 Orbes Exaltées</div>
+            </div>
+        </section>
+        
+        <section class="result-section">
+            <div class="section-title result-title">⚖️ RÉSULTAT</div>
+            <div class="result" id="finalResult">Sélectionnez des items pour calculer</div>
+            <div id="profitIndicator"></div>
+        </section>
+    </div>
+
+    <!-- Modal pour éditer les prix -->
+    <div id="priceModal" class="modal">
+        <div class="modal-content">
+            <header class="modal-header">
+                <h2>📝 ÉDITEUR DE PRIX</h2>
+            </header>
+            <div id="priceEditor" class="price-editor"></div>
+            <footer class="modal-footer">
+                <button id="savePricesBtn" class="btn btn-success">✅ SAUVEGARDER</button>
+                <button id="cancelPricesBtn" class="btn btn-danger">❌ ANNULER</button>
+            </footer>
+        </div>
+    </div>
+
+    <script type="module" src="js/config.js"></script>
+    <script type="module" src="js/storage.js"></script>
+    <script type="module" src="js/autocomplete.js"></script>
+    <script type="module" src="js/calculator.js"></script>
+    <script type="module" src="js/priceEditor.js"></script>
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>

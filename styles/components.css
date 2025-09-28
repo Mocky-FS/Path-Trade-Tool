@@ -1,0 +1,161 @@
+/* ===== FORM COMPONENTS ===== */
+.form-group {
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+label {
+    font-weight: bold;
+    min-width: 120px;
+    color: var(--text-secondary);
+}
+
+/* ===== INPUT COMPONENTS ===== */
+input[type="text"], 
+input[type="number"] {
+    padding: 12px;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    background: #333;
+    color: var(--text-primary);
+    font-size: 16px;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus, 
+input[type="number"]:focus {
+    border-color: var(--primary-gold);
+    outline: none;
+    box-shadow: var(--shadow-focus);
+}
+
+.quantity-input {
+    width: 150px !important;
+}
+
+/* ===== SEARCH COMPONENTS ===== */
+.search-container {
+    position: relative;
+    flex: 1;
+    min-width: 200px;
+}
+
+.suggestions {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #222;
+    border: 2px solid var(--border-color);
+    border-top: none;
+    border-radius: 0 0 8px 8px;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 1000;
+    display: none;
+}
+
+.suggestion-item {
+    padding: 10px 15px;
+    cursor: pointer;
+    border-bottom: 1px solid var(--border-color);
+    transition: background 0.2s ease;
+}
+
+.suggestion-item:hover, 
+.suggestion-item.highlighted {
+    background: var(--primary-gold);
+    color: #000;
+}
+
+.suggestion-item:last-child {
+    border-bottom: none;
+}
+
+/* ===== BUTTON COMPONENTS ===== */
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.btn-primary {
+    background: var(--info-color);
+    color: white;
+}
+
+.btn-secondary {
+    background: var(--danger-color);
+    color: white;
+}
+
+.btn-success {
+    background: var(--success-color);
+    color: black;
+}
+
+.btn-danger {
+    background: var(--danger-color);
+    color: white;
+}
+
+/* ===== VALUE DISPLAY COMPONENTS ===== */
+.value-display {
+    background: #444;
+    padding: 8px 12px;
+    border-radius: 6px;
+    color: var(--primary-gold);
+    font-weight: bold;
+    min-width: 150px;
+    text-align: center;
+    border: 1px solid var(--border-color);
+}
+
+.total-value {
+    font-size: 1.1em;
+    background: #555;
+    border: 2px solid var(--primary-gold);
+}
+
+/* ===== RESULT COMPONENTS ===== */
+.result {
+    font-size: 2em;
+    font-weight: bold;
+    margin: 20px 0;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.result.profit {
+    color: var(--success-color);
+}
+
+.result.loss {
+    color: var(--danger-color);
+}
+
+.result.neutral {
+    color: var(--warning-color);
+}
+
+#profitIndicator {
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+}
