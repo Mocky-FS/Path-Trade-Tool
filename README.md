@@ -44,7 +44,4 @@ This project is built with standard web technologies (HTML, CSS, JavaScript) and
 
 Contributions are welcome! If you have ideas for improvement, bug fixes, or new features to suggest, feel free to submit a pull request or open an issue.
 
-## 📄 License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
 # Path-Trade-Tool
