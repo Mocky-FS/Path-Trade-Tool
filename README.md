@@ -1,6 +1,6 @@
-# 📊 Path of Exile 2 Profit Calculator
+# 📊 Path-Trade-Tool
 
-Welcome to the Path of Exile 2 Profit Calculator! This tool helps you optimize your trades by calculating potential profits based on item prices.
+Welcome to the Path-Trade-Tool! This tool helps you optimize your trades by calculating potential profits based on item prices.
 
 ## ✨ Features
 
