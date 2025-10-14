@@ -42,6 +42,7 @@ This project is built with standard web technologies (HTML, CSS, JavaScript) and
 
 ## 🤝 Contribution
 
-Contributions are welcome! If you have ideas for improvement, bug fixes, or new features to suggest, feel free to submit a pull request or open an issue.
+This project is in early development. See [CONTRIBUTING.md](CONTRIBUTING.md) for details.
+
 
 # Path-Trade-Tool
