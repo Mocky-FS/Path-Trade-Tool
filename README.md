@@ -1,47 +1,110 @@
-# 📊 Path of Exile 2 Profit Calculator
+# Path Trade Tools
 
-Welcome to the Path of Exile 2 Profit Calculator! This tool helps you optimize your trades by calculating potential profits based on item prices.
+> Convert Path of Exile 2 currency prices to Exalted Orbs and detect profitable trades.
 
-## ✨ Features
+![Version](https://img.shields.io/badge/version-2.0.0-blue) ![Go](https://img.shields.io/badge/Go-1.25.3-00ADD8) ![Angular](https://img.shields.io/badge/Angular-20-DD0031)
 
--   **Intuitive Profit Calculation:** Enter the items you wish to sell and buy, and the tool will automatically calculate your profit or loss.
--   **Smart Autocompletion:** Quickly find items using the autocompletion feature.
--   **Price Editor:** Easily modify item prices to adapt to the current market.
--   **Save and Load Functionality:** Save your custom prices locally in your browser and import/export them via JSON files.
--   **Visual Profit Indicator:** Get a clear overview of your transactions with profit, loss, or break-even indicators.
+---
 
-## 🚀 How to Use
+## What is this?
 
-1.  **Launch the Tool:** Open `index.html` in your browser (the easiest way is to use an extension like Live Server for VS Code).
-2.  **Manage Prices:**
-    -   Click on "📝 EDIT PRICES" to adjust item values.
-    -   Use "💾 SAVE PRICES" to store your changes locally.
-    -   "📁 LOAD PRICES" allows you to import an existing JSON price file, and the tool will also generate a JSON file that you can export to save your prices.
-3.  **Calculate Profits:**
-    -   In the "💰 ITEM TO SELL" section, start typing the name of the item you want to sell. Autocompletion will help you find it.
-    -   Set the quantity of the item to sell.
-    -   Do the same for the "💸 COST TO BUY" section.
-    -   The "⚖️ RESULT" will automatically display, indicating your profit or loss.
+A desktop overlay + API that helps PoE2 players:
+- Convert any currency to Exalted Orbs
+- Detect bad deals
+- Find profitable trades
 
-## 🛠️ Development
+**Example**: Trading 3 Annulments for 1 Divine?  
+→ You lose 200 Exalted (-33%) ❌
 
-This project is built with standard web technologies (HTML, CSS, JavaScript) and uses a modular approach for easy maintenance.
+---
 
-### File Structure
+## Quick Start
 
--   `index.html`: The main structure of the application.
--   `js/`: Contains all JavaScript scripts.
-    -   `app.js`: Main entry point of the application.
-    -   `autocomplete.js`: Manages autocompletion logic.
-    -   `calculator.js`: Contains the profit calculation logic.
-    -   `config.js`: Global application configurations.
-    -   `priceEditor.js`: Manages the price editing interface.
-    -   `storage.js`: Handles data persistence via `localStorage`.
-    -   `defaultItems.json`: Contains the list of default items and their prices.
--   `styles/`: Contains CSS files for layout and styling.
+```bash
+# Clone
+git clone https://github.com/Mocky-FS/Path-Trade-Tool.git
+cd Path-Trade-Tool
+git checkout v2-development
 
-## 🤝 Contribution
+# Run backend
+cd backend
+make run
 
-Contributions are welcome! If you have ideas for improvement, bug fixes, or new features to suggest, feel free to submit a pull request or open an issue.
+# Test
+curl http://localhost:8080/api/health
+```
 
-# Path-Trade-Tool
+---
+
+## Tech Stack
+
+- **Backend**: Go 1.25.3 + Fiber v3 + SQLite
+- **Frontend**: Angular 20 + Tauri 2.0 + Tailwind CSS
+
+---
+
+## Commands
+
+```bash
+make run      # Start server
+make build    # Compile binary
+make test     # Run tests
+make clean    # Clean builds
+```
+
+---
+
+## API
+
+```bash
+# Health
+GET /api/health
+
+# Prices
+GET /api/prices
+
+# Convert
+GET /api/convert?from=divine&to=exalt&amount=3
+```
+
+---
+
+## Roadmap
+
+- [x] Backend API (Go + Fiber)
+- [ ] Database schema
+- [ ] Tauri overlay
+- [ ] Auto-scraping
+- [ ] Opportunity finder
+
+Full roadmap: [GitHub Projects](https://github.com/users/Mocky-FS/projects/4)
+
+---
+
+## Contributing
+
+🚧 Early development - contributions open in Phase 3+
+
+For now:
+- ⭐ Star the repo
+- 🐛 Report bugs
+- 💡 Suggest features
+
+See [CONTRIBUTING.md](CONTRIBUTING.md)
+
+---
+
+## License
+
+MIT License - see [LICENSE](LICENSE)
+
+---
+
+## Contact
+
+- **GitHub**: [@Mocky-FS](https://github.com/Mocky-FS)
+- **Issues**: [Report here](https://github.com/Mocky-FS/Path-Trade-Tool/issues)
+
+---
+
+⭐ **Star if useful!**

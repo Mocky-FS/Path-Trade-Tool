@@ -1,0 +1,46 @@
+# AI Context (private)
+CLAUDE.md
+.clinerules
+AIDD.md
+*.ai.md
+docs/prd/
+docs/context/
+cahier-des-charges.md
+
+# Backend (Go)
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+server
+server.exe
+*.test
+*.out
+vendor/
+go.work
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Frontend (quand tu l'ajouteras)
+node_modules/
+dist/
+.angular/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
