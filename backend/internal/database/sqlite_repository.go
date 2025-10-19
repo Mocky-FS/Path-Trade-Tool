@@ -4,7 +4,7 @@ import (
 	"database/sql"
 	"fmt"
 
-	"github.com/Mocky-FS/Path-Trade-Tool/internal/models"
+	"github.com/Mocky-FS/Path-Trade-Tools/internal/models"
 )
 
 // SQLiteRepository implements CurrencyRepository for SQLite

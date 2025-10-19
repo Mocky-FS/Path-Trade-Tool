@@ -4,7 +4,7 @@ import (
 	"log"
 
 	"github.com/gofiber/fiber/v3"
-	"github.com/Mocky-FS/Path-Trade-Tool/internal/database"
+	"github.com/Mocky-FS/Path-Trade-Tools/internal/database"
 )
 
 // Handler holds dependencies for API handlers

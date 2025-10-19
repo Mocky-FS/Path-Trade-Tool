@@ -1,6 +1,6 @@
 package database
 
-import "github.com/Mocky-FS/Path-Trade-Tool/internal/models"
+import "github.com/Mocky-FS/Path-Trade-Tools/internal/models"
 
 // CurrencyRepository defines methods to interact with currency data
 // This is a "port" in Clean Architecture (interface)
