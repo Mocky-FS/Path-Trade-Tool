@@ -30,7 +30,7 @@ go.work
 *.sqlite
 *.sqlite3
 
-# Frontend (quand tu l'ajouteras)
+# Frontend
 node_modules/
 dist/
 .angular/
