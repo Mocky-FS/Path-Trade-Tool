@@ -13,8 +13,8 @@ cahier-des-charges.md
 *.dll
 *.so
 *.dylib
-server
-server.exe
+**/bin/server
+**/bin/server.exe
 *.test
 *.out
 vendor/
